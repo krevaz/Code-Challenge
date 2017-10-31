@@ -1,0 +1,21 @@
+
+*********************************
+Here is a key: 2e50796db7e235e0	*
+*********************************
+
+This API looking for users by email. Enter personal email to look up for someone interested.
+
+Name of person, images, personal social sites(I made them clickable) and work background.
+
+Before you start searching user, you must provide key for authorisation on the server and lock it by clicking Lock button.
+
+Key is limited. 100 matched user only. 
+
+I can provide better functionality and design but due to key limits can't. I want to save some try for you.
+
+Not all the returned data is used. There is a lot. This application may be a useful to look up candidates or others background. 
+
+You can find 2 calls: $.ajax and javascript XMLHttpRequest. Both are functional, just replace comments.
+
+I've tried many of my friends emails to enter but not all of them was provide enough information as my personal. 
+you can try it as well: krevaz@gmail.com to see some layout and after try others.
