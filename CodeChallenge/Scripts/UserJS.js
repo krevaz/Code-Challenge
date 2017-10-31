@@ -10,7 +10,7 @@
     },
     // For this time using only user full name and applying under user image.
     createPersonalInfo: function (contInfo) {
-        $('.nameContainer').append('<div class="col-md-12"><label class="control-label fullName">' + contInfo + '</label></div>');
+        $('.nameContainer').append('<div class=""><label class="control-label fullName">' + contInfo + '</label></div>');
     },
     // Create list of user jobs list, if provided.
     createJobList: function (organizations) {
@@ -45,7 +45,7 @@
            
         });
         // Line after each job record.
-        user.jobResultHolder.append('<hr><br />'); 
+        user.jobResultHolder.append('<div class="col-md-12"><hr></div>'); 
     },
     // Create social media network icons list under picture frame.
     createSocialInfo: function (socialInfo) {
