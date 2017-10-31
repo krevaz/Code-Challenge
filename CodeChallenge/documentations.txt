@@ -1,3 +1,5 @@
+1) CodeChallenge is HTML and JS Separated from ASP.NET MVC To be easy finding godes.
+2) UserLookUp is ASP.NET MVS project currently does same think but behaves better. (Has to run on the server. )
 
 *********************************
 Here is a key: 2e50796db7e235e0	*
