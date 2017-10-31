@@ -30,7 +30,7 @@
         xmlhttp.open("GET", url, true);
         xmlhttp.send();
     },
-    // Another way to get data using jQuery ajax call
+    // Get data using jQuery ajax call
     ajaxCall: function (url, success, data, async) {
         var type = 'GET';
         if (async === undefined) {
@@ -60,7 +60,7 @@
             }
         });
     },
-
+    // Validate email address
     ValidateEmail: function (element) {
         var MyEmail = element.value;
         var format = /^(?:[a-zA-Z0-9.\-+]+|(?:".+"))@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)+$/;
@@ -73,7 +73,7 @@
         return true;
     },
 
-    //Validate empty fields
+    // Validate empty fields
     requiredFieldValidate: function (element) {
         var text = element.value.trim();
         if (text == '') {
