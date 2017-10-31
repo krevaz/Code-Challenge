@@ -16,7 +16,6 @@
     });
   
     $('#btnSubmit').click(function () {
-        utility.message = '';
         if (!utility.requiredFieldValidate(txtKey)) {
             return;
         }

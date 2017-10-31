@@ -1,5 +1,4 @@
-﻿var utility = {
-    message: '',
+﻿var utility = {   
     // using javascript to get the data
     newpostReq: function (url, callBack, data) {
         var xmlhttp;
