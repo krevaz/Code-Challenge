@@ -58,7 +58,11 @@
                         }
                     }
                 }
-
+				
+				if (personInfo.demographics && personInfo.demographics.locationDeduced) {
+                    user.createDemographicInfo(personInfo.demographics.locationDeduced);
+                }
+				
                 if (personInfo.organizations) {
                     if (personInfo.organizations.length > 0) {
                         for (var i = 0; i < personInfo.organizations.length; i++) {

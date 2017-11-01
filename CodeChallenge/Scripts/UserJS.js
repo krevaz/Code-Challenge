@@ -12,6 +12,18 @@
     createPersonalInfo: function (contInfo) {
         $('.nameContainer').append('<div class=""><label class="control-label fullName">' + contInfo + '</label></div>');
     },
+	
+	 // This will render map of user address if any.
+    createDemographicInfo: function (demogInfo) {
+        var htmlString = '', address = demogInfo.city.name + '+' + demogInfo.state.name;
+
+        htmlString = '<br><div class="panel panel-default socMarginT"><div class="panel-heading"><h4>Address</h4></div> <div class="panel-body">' +
+            '<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA4jrhfv19qj0UJazSSa9Nz-EL5cb_qfXY &amp;q=' +
+            address + '" frameborder="0" allowfullscreen="" style="border:0"></iframe ></div ></div > ';
+
+        user.resultHolder.append(htmlString);
+    },	
+	
     // Create list of user jobs list, if provided.
     createJobList: function (organizations) {
         var title = '';
@@ -41,7 +53,7 @@
                     break;
             }
             // Write job records
-            user.jobResultHolder.append('<div class="col-md-12">' + title + ' ' + val + '</div>'); 
+            user.jobResultHolder.append(user.htmlHelper(title, val)); 
            
         });
         // Line after each job record.
@@ -61,4 +73,8 @@
             }
         });
     },
+	
+	htmlHelper: function (name, value) {
+        return '<div class="col-md-12">' + name + ' ' + value + '</div>';
+    }
 }

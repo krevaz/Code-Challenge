@@ -73,6 +73,7 @@
             }
         });
     },
+
     htmlHelper: function (name, value) {
         return '<div class="col-md-12">' + name + ' ' + value + '</div>';
     }
