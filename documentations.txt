@@ -23,3 +23,5 @@ I've tried many of my friends emails to enter but not all of them was provide en
 you can try it as well: krevaz@gmail.com to see some layout and after try others.
 
 ** bsmith@gmail.com, ndavis@gmail.com, dadams@gmail.com
+
+* I Made some updates and improvement. API Key was reseted last night. 
