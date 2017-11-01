@@ -1,4 +1,4 @@
-1) CodeChallenge is HTML and JS Separated from ASP.NET MVC To be easy finding codes.
+1) CodeChallenge is HTML and JS Separated from ASP.NET MVC To be easy finding codes. (index.html to start)
 2) UserLookUp is ASP.NET MVS project currently does same think but behaves better. (Has to run on the server.)
 
 *********************************
@@ -21,3 +21,5 @@ You can find 2 calls: $.ajax and javascript XMLHttpRequest. Both are functional,
 
 I've tried many of my friends emails to enter but not all of them was provide enough information as my personal. 
 you can try it as well: krevaz@gmail.com to see some layout and after try others.
+
+** bsmith@gmail.com, ndavis@gmail.com, dadams@gmail.com
