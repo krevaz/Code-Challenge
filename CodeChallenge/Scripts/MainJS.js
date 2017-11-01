@@ -40,8 +40,16 @@
                     user.createImage(personInfo.photos[0].url);
                 }
                 else {
-                    var gender = personInfo.demographics.gender;
-                    user.createImage('/Img/' + gender + '.jpg');
+					var gender = '';
+					if(personInfo.demographics && personInfo.demographics.gender)
+					{
+						gender = personInfo.demographics.gender;
+					}
+					else
+					{
+						gender = 'Male';
+					}					
+                    user.createImage('Img/' + gender + '.jpg');
                 }
 
                 if (personInfo.contactInfo) {
