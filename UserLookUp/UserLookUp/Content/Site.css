@@ -23,6 +23,12 @@ textarea {
     max-width: 280px;
 }
 
+.myProject .imgCount {
+    position: relative;
+    left: 190px;
+    width: 130px;
+} 
+
 .myProject .socMarginR {
     margin-right: 10px;
 }

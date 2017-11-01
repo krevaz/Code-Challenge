@@ -1,17 +1,17 @@
 ﻿var user = {
     // Decide to use jQuery selector. 
-    resultHolder: $('.resultHolder'), jobResultHolder: $('.jobResultHolder'),
+    contentHolder: $('.contentHolder'), nameContainer: $('.nameContainer'), imgHolder: $('.imgHolder'), jobResultHolder: $('.jobResultHolder'),
 
     // Create real image of user or if not exist apply empty image by gender.
     createImage: function (imagePath) {
-        user.resultHolder.html('');
-        user.resultHolder.append('<div class="mainContainer">' +
-            '<img src="' + imagePath + '" alt="User Image" width="100%"><div class="nameContainer"></div ></div > ');
+        user.imgHolder.html('');
+        user.imgHolder.append('<img src="' + imagePath + '" alt="User Image" width="100%"><div class="imgCount">' +
+            utility.PicList.length + ' Images found</div>');
     },
 
     // For this time using only user full name and applying under user image.
-    createPersonalInfo: function (contInfo) {       
-        $('.nameContainer').append('<div class=""><label class="control-label fullName">' +
+    createPersonalInfo: function (contInfo) {
+        user.nameContainer.append('<div class=""><label class="control-label fullName">' +
             contInfo.fullName ? contInfo.fullName : 'No name' + '</label></div>');
     },
 
@@ -25,7 +25,7 @@
                 '<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA4jrhfv19qj0UJazSSa9Nz-EL5cb_qfXY &amp;q=' +
                 address + '" frameborder="0" allowfullscreen="" style="border:0"></iframe ></div ></div > ';
 
-            user.resultHolder.append(htmlString);
+            user.contentHolder.append(htmlString);
         }
     },
 
@@ -73,7 +73,7 @@
                     icon = 'fa fa-' + val + ' fa-2x';
                     break;
                 case 'url':
-                    user.resultHolder.append('<a href="' + val + '" target="_blank" class="socMarginR" ><span class="' + icon + '"></span></a>');
+                    user.contentHolder.append('<a href="' + val + '" target="_blank" class="socMarginR" ><span class="' + icon + '"></span></a>');
                     break;
             }
         });

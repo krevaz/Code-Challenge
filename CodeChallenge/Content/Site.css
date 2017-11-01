@@ -14,6 +14,12 @@ textarea {
     max-width: 280px;
 }
 
+.myProject .imgCount {
+    position: relative;
+    left: 190px;
+    width: 130px;
+} 
+
 .myProject .socMarginR {
     margin-right: 10px;
 }
@@ -45,7 +51,7 @@ textarea {
 }
 
 .myProject .keyDivPosition {
-    margin-top:15px;
-    margin-bottom:15px;
-    text-align:right
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: right
 }

@@ -1,4 +1,5 @@
 ﻿var utility = {
+    PicList: [],
     // using javascript to get the data
     newpostReq: function (url, callBack, data) {
         var xmlhttp;
@@ -18,12 +19,13 @@
             }
             else if (xmlhttp.status == 404) {
                 user.jobResultHolder.html('');
-                user.resultHolder.html('User not Found!').css('color', 'red');
+                user.contentHolder.html('User not Found!').css('color', 'red');
+                user.createImage('Img/Male.jpg');
                 return false;
             }
             else if (xmlhttp.status == 403) {
                 user.jobResultHolder.html('');
-                user.resultHolder.html('Invalid key or key not locked!').css('color', 'red');
+                user.contentHolder.html('Invalid key or key not locked!').css('color', 'red');
                 return false;
             }
         }
@@ -49,12 +51,13 @@
             error: function (error) {
                 if (error.status == 404) {
                     user.jobResultHolder.html('');
-                    user.resultHolder.html('User not Found!').css('color', 'red');
+                    user.contentHolder.html('User not Found!').css('color', 'red');
+                    user.createImage('Img/Male.jpg');
                     return false;
                 }
                 else if (error.status == 403) {
                     user.jobResultHolder.html('');
-                    user.resultHolder.html('Invalid key or key not locked!').css('color', 'red');
+                    user.contentHolder.html('Invalid key or key not locked!').css('color', 'red');
                     return false;
                 }
                 else {
@@ -98,5 +101,9 @@
                 func(obj);
             }
         }
-    }
+    },
+
+    createPicList: function (picObj) {
+        utility.PicList.push(picObj.url);
+    },    
 }
