@@ -17,7 +17,7 @@
     createDemographicInfo: function (demogInfo) {
         var htmlString = '', address = demogInfo.city.name + '+' + demogInfo.state.name;
 
-        htmlString = '<br><div class="panel panel-default socMarginT"><div class="panel-heading"><h4>Address</h4></div> <div class="panel-body">' +
+        htmlString = '<div class="panel panel-default socMarginT"><div class="panel-heading"><h4>Address</h4></div> <div class="panel-body">' +
             '<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA4jrhfv19qj0UJazSSa9Nz-EL5cb_qfXY &amp;q=' +
             address + '" frameborder="0" allowfullscreen="" style="border:0"></iframe ></div ></div > ';
 
