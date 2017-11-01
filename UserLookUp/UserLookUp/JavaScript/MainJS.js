@@ -14,7 +14,7 @@
             }
         }
     });
-  
+
     $('#btnSubmit').click(function () {
         if (!utility.requiredFieldValidate(txtKey)) {
             return;
@@ -40,8 +40,12 @@
                     user.createImage(personInfo.photos[0].url);
                 }
                 else {
-                    var gender = personInfo.demographics.gender;
-                    user.createImage('/Img/' + gender + '.jpg');
+                    if (personInfo.demographics && personInfo.demographics.gender) {
+                        user.createImage('/Img/' + personInfo.demographics.gender + '.jpg');
+                    }
+                    else {
+                        user.createImage('/Img/Male.jpg');
+                    }
                 }
 
                 if (personInfo.contactInfo) {
@@ -57,6 +61,10 @@
                             user.createSocialInfo(personInfo.socialProfiles[i]);
                         }
                     }
+                }
+
+                if (personInfo.demographics && personInfo.demographics.locationDeduced) {
+                    user.createDemographicInfo(personInfo.demographics.locationDeduced);
                 }
 
                 if (personInfo.organizations) {

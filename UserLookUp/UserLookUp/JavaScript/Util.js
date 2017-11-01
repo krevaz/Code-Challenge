@@ -57,13 +57,16 @@
                     user.resultHolder.html('Invalid key or key not locked!').css('color', 'red');
                     return false;
                 }
+                else {
+                    user.resultHolder.css('color', '');
+                }
             }
         });
     },
     // Validate email address
     ValidateEmail: function (element) {
         var MyEmail = element.value;
-        var format = /^(?:[a-zA-Z0-9.\-+]+|(?:".+"))@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)+$/;
+        var format = /^(?:[a-zA-Z0-9._\-+]+|(?:".+"))@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)+$/;
         MyEmail = MyEmail.trim();
         if (!MyEmail.match(format)) {
             element.style.border = '2px solid  red';
