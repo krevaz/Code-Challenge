@@ -1,4 +1,4 @@
-1) CodeChallenge is HTML and JS Separated from ASP.NET MVC To be easy finding godes.
+1) CodeChallenge is HTML and JS Separated from ASP.NET MVC To be easy finding codes.
 2) UserLookUp is ASP.NET MVS project currently does same think but behaves better. (Has to run on the server.)
 
 *********************************
@@ -9,7 +9,7 @@ This API looking for users by email. Enter personal email to look up for someone
 
 Name of person, images, personal social sites(I made them clickable) and work background.
 
-Before you start searching user, you must provide key for authorisation on the server and lock it by clicking Lock button.
+Before you start searching user, you must provide key for authorization on the server and lock it by clicking Lock button.
 
 Key is limited. 100 matched user only. 
 
