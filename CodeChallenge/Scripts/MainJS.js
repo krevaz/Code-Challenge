@@ -3,7 +3,6 @@
     $('.chkLock').click(function () {
         if (utility.requiredFieldValidate(txtKey)) {
             if (chkLock.is(':checked')) {
-                chkLock.text();
                 txtKey.value = key;
                 key = '';
                 txtKey.style.display = '';
@@ -14,7 +13,7 @@
             }
         }
     });
-  
+
     $('#btnSubmit').click(function () {
         if (!utility.requiredFieldValidate(txtKey)) {
             return;
@@ -26,12 +25,12 @@
 
         var returndata = function (data) {
             if (data) {
-                var personInfo = '';
-                if (typeof data === 'object') {
+                var personInfo;
+                if (typeof data === 'object') { //$.json returns object
                     personInfo = data;
                 }
                 else {
-                    personInfo = JSON.parse(data);
+                    personInfo = JSON.parse(data); // xmlhttp returns json string. converting to object.
                 }
                 user.jobResultHolder.html('');
                 user.resultHolder.html('');
@@ -40,46 +39,26 @@
                     user.createImage(personInfo.photos[0].url);
                 }
                 else {
-					var gender = '';
-					if(personInfo.demographics && personInfo.demographics.gender)
-					{
-						gender = personInfo.demographics.gender;
-					}
-					else
-					{
-						gender = 'Male';
-					}					
-                    user.createImage('Img/' + gender + '.jpg');
-                }
-
-                if (personInfo.contactInfo) {
-                    user.createPersonalInfo(personInfo.contactInfo.fullName);
-                }
-                else {
-                    user.createPersonalInfo('No Name.');
-                }
-
-                if (personInfo.socialProfiles) {
-                    if (personInfo.socialProfiles.length > 0) {
-                        for (var i = 0; i < personInfo.socialProfiles.length; i++) {
-                            user.createSocialInfo(personInfo.socialProfiles[i]);
-                        }
+                    if (personInfo.demographics && personInfo.demographics.gender) {
+                        user.createImage('/Img/' + personInfo.demographics.gender + '.jpg');
+                    }
+                    else {
+                        user.createImage('/Img/Male.jpg');
                     }
                 }
-				
-				if (personInfo.demographics && personInfo.demographics.locationDeduced) {
+
+                utility.getListItem(personInfo.contactInfo, user.createPersonalInfo );
+               
+                utility.getListItem(personInfo.socialProfiles, user.createSocialInfo);
+               
+                if (personInfo.demographics && personInfo.demographics.locationDeduced) {
                     user.createDemographicInfo(personInfo.demographics.locationDeduced);
                 }
-				
-                if (personInfo.organizations) {
-                    if (personInfo.organizations.length > 0) {
-                        for (var i = 0; i < personInfo.organizations.length; i++) {
-                            user.createJobList(personInfo.organizations[i]);
-                        }
-                    }
-                }
+
+                utility.getListItem(personInfo.organizations, user.createJobList);
             }
         }
+        
         // 2 way getting data. replace comments key: 2e50796db7e235e0
 
         // 1. way to get data using javascript. This call will work even for IE 8 & 9
@@ -87,7 +66,6 @@
 
         // 2. way to get data using jQuery ajax call
         //utility.ajaxCall('https://api.fullcontact.com/v2/person.json?apiKey=' + key + '&email=' + txtEmail.value + '', returndata);
-
 
     });
 });

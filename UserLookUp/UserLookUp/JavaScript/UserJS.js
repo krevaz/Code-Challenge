@@ -8,9 +8,11 @@
         user.resultHolder.append('<div class="mainContainer">' +
             '<img src="' + imagePath + '" alt="User Image" width="100%"><div class="nameContainer"></div ></div > ');
     },
+
     // For this time using only user full name and applying under user image.
-    createPersonalInfo: function (contInfo) {
-        $('.nameContainer').append('<div class=""><label class="control-label fullName">' + contInfo + '</label></div>');
+    createPersonalInfo: function (contInfo) {       
+        $('.nameContainer').append('<div class=""><label class="control-label fullName">' +
+            contInfo.fullName ? contInfo.fullName : 'No name' + '</label></div>');
     },
 
     // This will render map of user address if any.

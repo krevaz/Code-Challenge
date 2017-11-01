@@ -1,4 +1,4 @@
-﻿var utility = {   
+﻿var utility = {
     // using javascript to get the data
     newpostReq: function (url, callBack, data) {
         var xmlhttp;
@@ -18,7 +18,7 @@
             }
             else if (xmlhttp.status == 404) {
                 user.jobResultHolder.html('');
-                user.resultHolder.html('User not Found!').css('color','red');
+                user.resultHolder.html('User not Found!').css('color', 'red');
                 return false;
             }
             else if (xmlhttp.status == 403) {
@@ -85,5 +85,18 @@
         }
         element.style.border = '2px solid #ccc';
         return true;
+    },
+
+    getListItem: function (obj, func) {
+        if (obj) {
+            if (obj.length > 0) {
+                for (var i = 0; i < obj.length; i++) {
+                    func(obj[i]);
+                }
+            }
+            else if (typeof obj.length == 'undefined') {
+                func(obj);
+            }
+        }
     }
 }

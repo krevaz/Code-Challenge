@@ -1,4 +1,4 @@
-﻿var utility = {   
+﻿var utility = {
     // using javascript to get the data
     newpostReq: function (url, callBack, data) {
         var xmlhttp;
@@ -18,7 +18,7 @@
             }
             else if (xmlhttp.status == 404) {
                 user.jobResultHolder.html('');
-                user.resultHolder.html('User not Found!').css('color','red');
+                user.resultHolder.html('User not Found!').css('color', 'red');
                 return false;
             }
             else if (xmlhttp.status == 403) {
@@ -30,7 +30,7 @@
         xmlhttp.open("GET", url, true);
         xmlhttp.send();
     },
-    // Another way to get data using jQuery ajax call
+    // Get data using jQuery ajax call
     ajaxCall: function (url, success, data, async) {
         var type = 'GET';
         if (async === undefined) {
@@ -57,13 +57,16 @@
                     user.resultHolder.html('Invalid key or key not locked!').css('color', 'red');
                     return false;
                 }
+                else {
+                    user.resultHolder.css('color', '');
+                }
             }
         });
     },
-
+    // Validate email address
     ValidateEmail: function (element) {
         var MyEmail = element.value;
-        var format = /^(?:[a-zA-Z0-9.\-+]+|(?:".+"))@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)+$/;
+        var format = /^(?:[a-zA-Z0-9._\-+]+|(?:".+"))@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)+$/;
         MyEmail = MyEmail.trim();
         if (!MyEmail.match(format)) {
             element.style.border = '2px solid  red';
@@ -73,7 +76,7 @@
         return true;
     },
 
-    //Validate empty fields
+    // Validate empty fields
     requiredFieldValidate: function (element) {
         var text = element.value.trim();
         if (text == '') {
@@ -82,5 +85,18 @@
         }
         element.style.border = '2px solid #ccc';
         return true;
+    },
+
+    getListItem: function (obj, func) {
+        if (obj) {
+            if (obj.length > 0) {
+                for (var i = 0; i < obj.length; i++) {
+                    func(obj[i]);
+                }
+            }
+            else if (typeof obj.length == 'undefined') {
+                func(obj);
+            }
+        }
     }
 }
