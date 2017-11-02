@@ -236,6 +236,7 @@
     <Content Include="Img\Female.jpg" />
     <Content Include="Img\globe-search.png" />
     <Content Include="Img\Male.jpg" />
+    <Content Include="Img\platform_connection.gif" />
     <Content Include="JavaScript\MainJS.js" />
     <Content Include="JavaScript\UserJS.js" />
     <Content Include="JavaScript\Util.js" />

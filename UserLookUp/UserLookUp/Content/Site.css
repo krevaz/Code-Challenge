@@ -21,8 +21,15 @@ textarea {
     width: 130px;
     font-weight: 700;
 }
+
 .myProject .text-icon {
-    color:#428bca;
+    color: #428bca;
+}
+
+.myProject .headIcon {
+    width: 100px;
+    border: 3px #e3e3e3 solid;
+    border-radius: 50%;
 }
 
 .myProject .socContainer {
@@ -30,7 +37,8 @@ textarea {
     margin: 10px 0 20px 0;
     padding-bottom: 30px;
 }
- .socMarginR {
+
+.socMarginR {
     margin-right: 10px;
 }
 
