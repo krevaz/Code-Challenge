@@ -17,8 +17,9 @@ textarea {
 /*Using namespacing*/
 .myProject .imgCount {
     position: relative;
-    left: 190px;
+    left: 100px;
     width: 130px;
+	font-weight: 700;
 } 
 
 .myProject .socMarginR {
@@ -33,7 +34,11 @@ textarea {
     color: #19466d;
 }
 
-.myProject .mainContainer {
+.myProject .jobResultHolder {	
+padding-top:20px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.myProject .mainContainer, .socMarginT{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 15px;
     text-align: center;
@@ -41,6 +46,7 @@ textarea {
 
 .myProject .nameContainer {
     padding: 10px;
+font-size: 20px;
 }
 
 .myProject .btn span.glyphicon {
