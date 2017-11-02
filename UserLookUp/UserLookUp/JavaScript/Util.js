@@ -18,14 +18,15 @@
                 callBack(xmlhttp.responseText);
             }
             else if (xmlhttp.status == 404) {
-                user.jobResultHolder.html('');
+                user.jobListHolder.html('');
                 user.contentHolder.html('User not Found!').css('color', 'red');
                 user.createImage('Img/Male.jpg');
                 return false;
             }
             else if (xmlhttp.status == 403) {
-                user.jobResultHolder.html('');
+                user.jobListHolder.html('');
                 user.contentHolder.html('Invalid key or key not locked!').css('color', 'red');
+                user.createImage('Img/Male.jpg');
                 return false;
             }
         }
