@@ -23,11 +23,11 @@
             return;
         }
 
-        user.jobResultHolder.html('');
-        user.contentHolder.html('');
+        user.jobListHolder.html('');
+        user.contentHolder.html('').css('color', '');
         user.nameContainer.html('');
         user.imgHolder.html('');
-        user.contentHolder.css('color','')
+        user.socContainer.html('');
         utility.PicList = [];
 
         var returndata = function (data) {
@@ -43,15 +43,15 @@
                 utility.getListItem(personInfo.photos, utility.createPicList);
                 // Creates image
                 user.createImage(utility.PicList[0]);
-                //Get user personal info and renders on the page
+                //Get user personal info and render on the page
                 utility.getListItem(personInfo.contactInfo, user.createPersonalInfo);
-                //Get user Social sites and renders icons to navigate to its page
+                //Get user Social sites and render icons to navigate to its page
                 utility.getListItem(personInfo.socialProfiles, user.createSocialInfo);
-                //Get User living locations and renders as a map iframe on the page
+                //Get User living locations and render as a map iframe on the page
                 if (personInfo.demographics && personInfo.demographics.locationDeduced) {
                     user.createDemographicInfo(personInfo.demographics.locationDeduced);
                 }
-                //Get user work history and renders on the page
+                //Get user work history and render on the page
                 utility.getListItem(personInfo.organizations, user.createJobList);
             }
         }

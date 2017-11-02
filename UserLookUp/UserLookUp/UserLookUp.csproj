@@ -234,6 +234,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Img\Female.jpg" />
+    <Content Include="Img\globe-search.png" />
     <Content Include="Img\Male.jpg" />
     <Content Include="JavaScript\MainJS.js" />
     <Content Include="JavaScript\UserJS.js" />

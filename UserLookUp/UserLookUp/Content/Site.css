@@ -14,15 +14,23 @@ textarea {
     max-width: 280px;
 }
 
-/*Using namespacing*/
+/*Using namespaces*/
 .myProject .imgCount {
     position: relative;
     left: 100px;
     width: 130px;
     font-weight: 700;
 }
+.myProject .text-icon {
+    color:#428bca;
+}
 
-.myProject .socMarginR {
+.myProject .socContainer {
+    position: relative;
+    margin: 10px 0 20px 0;
+    padding-bottom: 20px;
+}
+ .socMarginR {
     margin-right: 10px;
 }
 

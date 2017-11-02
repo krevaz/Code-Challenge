@@ -1,7 +1,7 @@
 ﻿var user = {
     // Decide to use jQuery selector. 
     contentHolder: $('.contentHolder'), nameContainer: $('.nameContainer'), imgHolder: $('.imgHolder'), jobResultHolder: $('.jobResultHolder'),
-
+    socContainer: $('.socContainer'), jobListHolder: $('.jobListHolder'),
     // Create real image of user or if not exist apply empty image by gender.
     createImage: function (imagePath) {
         user.imgHolder.html('');
@@ -21,7 +21,7 @@
         if (demogInfo.city && demogInfo.state) {
             address = demogInfo.city.name + '+' + demogInfo.state.name;
 
-            htmlString = '<div class="panel panel-default socMarginT"><div class="panel-heading"><h4>Address</h4></div> <div class="panel-body">' +
+            htmlString = '<div class="panel panel-default"><div class="panel-heading"><h4>Location</h4></div> <div class="panel-body">' +
                 '<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA4jrhfv19qj0UJazSSa9Nz-EL5cb_qfXY &amp;q=' +
                 address + '" frameborder="0" allowfullscreen="" style="border:0"></iframe ></div ></div > ';
 
@@ -58,11 +58,11 @@
                     break;
             }
             // Write job records
-            user.jobResultHolder.append(user.htmlHelper(title, val));
+            user.jobListHolder.append(user.htmlHelper(title, val));
 
         });
         // Line after each job record.
-        user.jobResultHolder.append('<div class="col-md-12"><hr></div>');
+        user.jobListHolder.append('<div class="col-md-12"><hr></div>');
     },
     // Create social media network icons list under picture frame.
     createSocialInfo: function (socialInfo) {
@@ -73,7 +73,7 @@
                     icon = 'fa fa-' + val + ' fa-2x';
                     break;
                 case 'url':
-                    user.contentHolder.append('<a href="' + val + '" target="_blank" class="socMarginR" ><span class="' + icon + '"></span></a>');
+                    user.socContainer.append('<a href="' + val + '" target="_blank" class="socMarginR" ><span class="' + icon + '"></span></a>');
                     break;
             }
         });

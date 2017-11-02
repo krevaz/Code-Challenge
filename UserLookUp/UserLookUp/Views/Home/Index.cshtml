@@ -3,9 +3,10 @@
 }
 <div class="myProject">
     <div class="keyDivPosition">
-        <div class="form-inline">
+        <img src="~/Img/globe-search.png" class="pull-left" style="width:80px" alt="User Image">
+        <div class="input-group">
             <input id="txtKey" type="text" class="form-control" placeholder="Enter key" />
-            <div class="btn-group" data-toggle="buttons">
+            <div class="input-group-btn" data-toggle="buttons">
                 <label class="btn btn-primary chkLock">
                     Lock
                     <input id="chkLock" type="checkbox" autocomplete="off">
@@ -14,7 +15,7 @@
             </div>
         </div>
     </div>
-    <div class="jumbotron">
+    <div class="well well-lg">
         <div class="input-group">
             <input id="txtEmail" type="text" class="form-control pull-right" placeholder="example@domain.com" />
             <span class="input-group-btn">
@@ -29,11 +30,16 @@
                     <img src="~/Img/Male.jpg" style="width:100%" alt="User Image">
                 </div>
                 <div class="nameContainer"></div>
+                <div class="socContainer"></div>
             </div>
-            <div class="contentHolder">
-
-            </div>
+            <div class="contentHolder"></div>
         </div>
-        <div class="jobResultHolder col-md-8"></div>
+        <div class="jobResultHolder col-md-8">
+            <h2 class="w3-text-grey w3-padding-16">
+                <i class="fa fa-suitcase fa-2x socMarginR text-icon"></i>Work Experience
+            </h2>
+            <hr />
+            <div class="jobListHolder"></div>
+        </div>
     </div>
 </div>

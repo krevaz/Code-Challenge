@@ -13,16 +13,23 @@ select,
 textarea {
     max-width: 280px;
 }
-
-/*Using namespacing*/
+/*Using namespaces*/
 .myProject .imgCount {
     position: relative;
     left: 100px;
     width: 130px;
-	font-weight: 700;
-} 
+    font-weight: 700;
+}
+.myProject .text-icon {
+    color:#428bca;
+}
 
-.myProject .socMarginR {
+.myProject .socContainer {
+    position: relative;
+    margin: 10px 0 20px 0;
+    padding-bottom: 20px;
+}
+ .socMarginR {
     margin-right: 10px;
 }
 
@@ -34,11 +41,12 @@ textarea {
     color: #19466d;
 }
 
-.myProject .jobResultHolder {	
-padding-top:20px;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.myProject .jobResultHolder {
+    padding-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.myProject .mainContainer, .socMarginT{
+
+.myProject .mainContainer, .socMarginT {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 15px;
     text-align: center;
@@ -46,7 +54,7 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 .myProject .nameContainer {
     padding: 10px;
-font-size: 20px;
+    font-size: 20px;
 }
 
 .myProject .btn span.glyphicon {
