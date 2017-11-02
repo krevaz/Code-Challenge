@@ -26,6 +26,7 @@
             else if (xmlhttp.status == 403) {
                 user.jobResultHolder.html('');
                 user.contentHolder.html('Invalid key or key not locked!').css('color', 'red');
+				user.createImage('Img/Male.jpg');
                 return false;
             }
         }

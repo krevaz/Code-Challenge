@@ -51,14 +51,15 @@
             success: success,
             error: function (error) {
                 if (error.status == 404) {
-                    user.jobResultHolder.html('');
+                    user.jobListHolder.html('');
                     user.contentHolder.html('User not Found!').css('color', 'red');
                     user.createImage('Img/Male.jpg');
                     return false;
                 }
                 else if (error.status == 403) {
-                    user.jobResultHolder.html('');
+                    user.jobListHolder.html('');
                     user.contentHolder.html('Invalid key or key not locked!').css('color', 'red');
+                    user.createImage('Img/Male.jpg');
                     return false;
                 }
                 else {
