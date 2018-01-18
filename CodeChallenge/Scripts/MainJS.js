@@ -56,7 +56,7 @@
             }
         }
 
-        // 2 way getting data. replace comments key: 2e50796db7e235e0
+        // 2 way getting data. replace comments key: 2e50796db7e235e0 * or * tTNgwUAYnwYnUxRPPdgBSLZ6uEp37J0m
 
         // 1. way to get data using javascript. This call will work even for IE 8 & 9
         utility.newpostReq('https://api.fullcontact.com/v2/person.json?apiKey=' + key + '&email=' + txtEmail.value + '', returndata);
