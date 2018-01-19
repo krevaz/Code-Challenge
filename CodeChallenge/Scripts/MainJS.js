@@ -33,7 +33,7 @@
         var returndata = function (data) {
             if (data) {
                 var personInfo;
-                if (typeof data === 'object') { // $.json returns object
+                if (typeof data === 'object') {
                     personInfo = data;
                 }
                 else {
