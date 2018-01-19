@@ -73,5 +73,9 @@ textarea {
 .myProject .keyDivPosition {
     margin-top: 15px;
     margin-bottom: 15px;
-    text-align: right
+    text-align: right;
+}
+
+.myProject .imgHolder:hover {
+    cursor: pointer;
 }
